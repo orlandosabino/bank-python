@@ -1,0 +1,4 @@
+original = list(range(1, 11))
+pares = [x for x in original if x % 2 == 0]
+print("Lista original:", original)
+print("Apenas pares:", pares)

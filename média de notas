@@ -1,0 +1,33 @@
+notas = []
+print("=== Calculadora de Média do Aluno ===")
+print("Digite as notas de 0 a 10. Digite -1 para encerrar.\n")
+#Loop para receber as notas
+while True:
+    entrada = input("Digite uma nota (ou -1 para finalizar):")
+    nota = float(entrada) # Conversão de string para float
+    # Condição para sair do loop
+    if nota == -1:
+        break
+    # validação da nota
+    if 0 <= nota <= 10:
+        notas.append(nota)
+        print(f"Nota {nota} adicionada com sucesso.")
+    else:
+        print("Valor inválido! Digite uma nota entre 0 e 10.")    
+# Avaliação final
+if len(notas) >0:
+    media = sum (notas) / len(notas) 
+    print(f"\nTotal de avaliações: {len(nota)}")  
+    print (F"Média final: {media:.2f}") 
+    # Condicionais para definira situação do aluno
+    if media >=7.0:
+        print("Situação: Aprovado!")    
+    elif media >= 5.0:
+        print ("Situação: Recuperaçao.")  
+    else:
+        print("Situação: Reprovado.")
+else:
+    print("\nNenhuma nota válida foi inserida.")    
+     
+
+
